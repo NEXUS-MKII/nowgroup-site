@@ -1,0 +1,50 @@
+  <section class="how console" id="how">
+    <div class="glow g1"></div><div class="glow g2"></div>
+    <div class="wrap">
+      <div class="hd rv"><div class="eye">How it works</div><h2 class="disp" id="cxTitle" data-text="Three steps. No fourth."></h2><p>Pay once, go through NET_SYNC, get your link. Nothing else to remember.</p></div>
+      <div class="frame rv">
+        <div class="ctl"></div><div class="cbr"></div>
+        <div class="chrome"><div class="dots"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i></div><span class="ct">NET_SYNC &#8212; three-step protocol</span><div class="led"><i></i>Ready</div></div>
+        <div class="stage"><div class="track" id="cxTrack"></div></div>
+        <div class="prog"><i id="cxProg"></i></div>
+        <div class="navrow"><button class="arrb" type="button" data-mv="-1" aria-label="Previous">&#8249;</button><div class="cdots" id="cxDots"></div><button class="arrb" type="button" data-mv="1" aria-label="Next">&#8250;</button></div>
+        <div class="cta"><a class="btn" href="#" data-cta="join">Join for $50 <span class="arr">&rarr;</span></a></div>
+      </div>
+    </div>
+  </section>
+  <section class="fit"><div class="wrap two rv">
+    <div><h3 class="disp">For you if</h3><p>You run a service business in NZ or AU, you&rsquo;d rather have three useful conversations than thirty business cards, and you&rsquo;re fine being introduced by a system rather than a handshake.</p></div>
+    <div><h3 class="disp">Not for you if</h3><p>You want a room to pitch to. There&rsquo;s no pitching. That was half the problem.</p></div>
+  </div></section>
+  <section class="proof console">
+    <div class="glow g1" style="top:-20%;left:50%;transform:translateX(-50%);width:80%;height:60%"></div>
+    <div class="wrap">
+      <div class="hd rv"><div class="eye">The proof</div><h2 class="disp">What members said <em>when it was still a membership.</em></h2><p>Verified Google reviews &middot; 5.0 &#9733; &middot; LinkedIn recommendations</p></div>
+      <div class="scene rv" id="ppScene"><div class="pool"></div><div class="screens">
+{{SCREENS}}      </div></div>
+      <div class="pdots" id="ppDots"></div>
+    </div>
+  </section>
+  <section class="bridge">
+    <img class="psi" src="https://nexus-mkii.github.io/psikiq/psi-gold.webp" alt="" aria-hidden="true">
+    <div class="wrap"><div class="rv" style="max-width:640px">
+      <div class="eye">The instrument behind the meeting</div>
+      <h2 class="disp">NOW is where we meet. <em>PsikiQ is how we see.</em></h2>
+      <p class="body">The same engine that runs NET_SYNC runs a full diagnostic on a business &mdash; where it actually is, and what it&rsquo;s about to need. If you want to see what that looks like before you meet anyone, run it on yourself. Eight minutes. No email required to see your read.</p>
+      <a class="btn" href="https://psikiq.io" data-cta="psikiq">&#968;&nbsp; Get your prognosis</a>
+    </div></div>
+  </section>
+  <section class="faq" id="faq"><div class="wrap">
+    <div class="rv"><div class="eye">Questions before you start?</div><h2 class="disp" style="margin-top:18px">Five, and that&rsquo;s all of them.</h2></div>
+    <div class="qs rv">
+      <details class="q" open><summary>Is this a membership?<span class="x">+</span></summary><div class="a">No. It&rsquo;s a one-off $50 for a year of access to an open meeting. Nothing renews.</div></details>
+      <details class="q"><summary>What&rsquo;s NET_SYNC?<span class="x">+</span></summary><div class="a">The ten-minute automated intake that tells us what you do and who you need, so your first meeting has people in it worth meeting. It&rsquo;s the only &ldquo;onboarding&rdquo; there is.</div></details>
+      <details class="q"><summary>How often is the meeting?<span class="x">+</span></summary><div class="a">[Chris &mdash; weekly / fortnightly, day and time. Say it plainly.]</div></details>
+      <details class="q"><summary>Can I pitch?<span class="x">+</span></summary><div class="a">No. You can be useful. That works better, and it&rsquo;s the reason people keep coming.</div></details>
+      <details class="q"><summary>What happens after a year?<span class="x">+</span></summary><div class="a">You decide if it was worth another $50. We&rsquo;ll ask once. That&rsquo;s it.</div></details>
+    </div>
+  </div></section>
+  <footer><div class="wrap row">
+    <a class="mark" href="/" aria-label="The NOW Group"><img src="IMGlogo-dark.png" alt="The NOW Group" width="562" height="456"></a>
+    <div class="fine">a <a href="https://psikiq.io">PsikiQ Solutions</a> company &middot; <a href="mailto:chris@nowgroup.co.nz">chris@nowgroup.co.nz</a> &middot; <a href="/privacy">privacy</a></div>
+  </div></footer>
