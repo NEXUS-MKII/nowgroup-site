@@ -36,6 +36,8 @@
     stage.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
     stage.addEventListener('touchend',function(e){ if(x0===null) return; var dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>40) go(cur+(dx<0?1:-1)); x0=null; },{passive:true});
     stage.addEventListener('mouseenter',function(){clearInterval(timer);}); stage.addEventListener('mouseleave',restart);
+    stage.setAttribute('tabindex','0'); stage.setAttribute('role','region'); stage.setAttribute('aria-label','NET_SYNC steps — use the arrow keys');
+    (root.__sliders=root.__sliders||[]).push({el:stage,step:function(d){go(cur+d);}});
     render(); restart();
   })();
   (function(){
@@ -54,5 +56,26 @@
     scene.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
     scene.addEventListener('touchend',function(e){ if(x0===null) return; var dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>40) go(cur+(dx<0?1:-1)); x0=null; },{passive:true});
     scene.addEventListener('mouseenter',function(){clearInterval(timer);}); scene.addEventListener('mouseleave',restart);
+    scene.setAttribute('tabindex','0'); scene.setAttribute('role','region'); scene.setAttribute('aria-label','Member reviews — use the arrow keys');
+    (root.__sliders=root.__sliders||[]).push({el:scene,step:function(d){go(cur+d);}});
     render(); restart();
+  })();
+  /* ── arrow keys drive whichever slider is on screen ── */
+  (function(){
+    var list=root.__sliders||[]; if(!list.length) return;
+    function pick(){
+      var mid=window.innerHeight/2, best=null, bd=Infinity;
+      list.forEach(function(s){ var r=s.el.getBoundingClientRect(); if(r.bottom<0||r.top>window.innerHeight) return;
+        var d=Math.abs((r.top+r.bottom)/2-mid); if(d<bd){bd=d;best=s;} });
+      return best;
+    }
+    document.addEventListener('keydown',function(e){
+      if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight') return;
+      var t=e.target, tag=(t.tagName||'').toLowerCase();
+      if(tag==='input'||tag==='textarea'||tag==='select'||t.isContentEditable) return;
+      /* a focused slider wins; otherwise the one nearest the middle of the screen */
+      var s=list.find(function(x){return x.el===t||x.el.contains(t);}) || pick();
+      if(!s) return;
+      e.preventDefault(); s.step(e.key==='ArrowRight'?1:-1);
+    });
   })();
